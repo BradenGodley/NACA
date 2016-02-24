@@ -1,0 +1,39 @@
+Client:
+    1 = Test packet from server
+        format: 1, -2
+    2 = Incoming message from server
+        format: 2, sender's ip address bytes, UTF-8 charset bytes, -2
+    3 = List of clients' ips from server
+        format: 3, (client ip address bytes, time joined, -4, nickname (UTF-8 charset bytes), -3,) ..., -2
+            -4: end of time joined data, start of nickname data
+            order: (client ip address, join time, nickname)
+    4 = server broadcast
+        format: 4, message (UTF-8 charset bytes), -2
+    5 = update client info
+        format: 5, client ip (127.0.0.1), time joined, -4, nickname (UTF-8 charset bytes), -2
+        -4: end of time joined data, start of nickname data
+        order: ip, join time, nickname
+    6 = client left/joined
+        format: 0/1 (joined/left), ip (127.0.0.1)
+    125 = someone already has taken that nickname!
+        format: 125, -2
+         
+    
+Server:
+    1 = Test packet from client
+        format: 1, -2
+    2 = Incoming message from client
+        format: 2, UTF-8 charset bytes, -2
+    3 = Request to send client list of clients
+        format: 3, -2
+    4 = Request for server to update client's nickname
+        format: 4, UTF-8 charset bytes, -2
+
+
+ALL:
+    -2 = end of packet
+    -3 = end of subpacket (before -2)
+    -4 = sub of subsubpacket :) (before -3)
+
+    126 = end connection;
+    127 = empty packet;
