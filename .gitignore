@@ -52,3 +52,5 @@ Temporary Items
 /ClientApplication/build/
 /ClientApplication/dist/
 /cio/nbproject/private/
+/cio/build/
+/cio/dist/
