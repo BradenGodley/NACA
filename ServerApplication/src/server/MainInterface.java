@@ -635,15 +635,10 @@ public final class MainInterface extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         connectionsList = new javax.swing.JList<>();
         clientPanel = new javax.swing.JPanel();
-        jSplitPane3 = new javax.swing.JSplitPane();
         clientInfoPanel = new javax.swing.JPanel();
         disconnectClientButton = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         clientInfo = new javax.swing.JTextArea();
-        sendSoundPanel = new javax.swing.JPanel();
-        playButton = new javax.swing.JButton();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        musicList = new javax.swing.JList<>();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         conversationBox = new javax.swing.JTextArea();
@@ -715,8 +710,6 @@ public final class MainInterface extends javax.swing.JFrame {
 
         clientPanel.setBackground(new java.awt.Color(204, 204, 204));
 
-        jSplitPane3.setDividerLocation(250);
-
         disconnectClientButton.setText("Disconnect");
         disconnectClientButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -734,54 +727,25 @@ public final class MainInterface extends javax.swing.JFrame {
         clientInfoPanelLayout.setHorizontalGroup(
             clientInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(disconnectClientButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
         );
         clientInfoPanelLayout.setVerticalGroup(
             clientInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clientInfoPanelLayout.createSequentialGroup()
                 .addComponent(disconnectClientButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE))
         );
-
-        jSplitPane3.setLeftComponent(clientInfoPanel);
-
-        playButton.setText("Play");
-        playButton.setActionCommand("playButton");
-
-        musicList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane5.setViewportView(musicList);
-
-        javax.swing.GroupLayout sendSoundPanelLayout = new javax.swing.GroupLayout(sendSoundPanel);
-        sendSoundPanel.setLayout(sendSoundPanelLayout);
-        sendSoundPanelLayout.setHorizontalGroup(
-            sendSoundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(playButton, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-            .addComponent(jScrollPane5)
-        );
-        sendSoundPanelLayout.setVerticalGroup(
-            sendSoundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sendSoundPanelLayout.createSequentialGroup()
-                .addComponent(playButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
-        );
-
-        jSplitPane3.setRightComponent(sendSoundPanel);
 
         javax.swing.GroupLayout clientPanelLayout = new javax.swing.GroupLayout(clientPanel);
         clientPanel.setLayout(clientPanelLayout);
         clientPanelLayout.setHorizontalGroup(
             clientPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane3)
+            .addComponent(clientInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         clientPanelLayout.setVerticalGroup(
             clientPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane3)
+            .addComponent(clientInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jSplitPane2.setRightComponent(clientPanel);
@@ -1013,16 +977,11 @@ public final class MainInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSplitPane jSplitPane2;
-    private javax.swing.JSplitPane jSplitPane3;
     private javax.swing.JTextField messageTextField;
-    private javax.swing.JList<String> musicList;
     private javax.swing.JButton onlineButton;
-    private javax.swing.JButton playButton;
     private javax.swing.JButton sendMessage;
-    private javax.swing.JPanel sendSoundPanel;
     // End of variables declaration//GEN-END:variables
     public JTextField cif;
     public JTextArea  cta;
