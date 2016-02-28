@@ -14,7 +14,9 @@ Client:
         -4: end of time joined data, start of nickname data
         order: ip, join time, nickname
     6 = client left/joined
-        format: 0/1 (joined/left), ip (127.0.0.1)
+        format: 6, 0/1 (joined/left), ip (127.0.0.1), -2
+    7 = voice data
+        format: 7, voice data idk ;-;
     125 = someone already has taken that nickname!
         format: 125, -2
          

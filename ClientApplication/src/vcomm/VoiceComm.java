@@ -25,6 +25,7 @@ import javax.swing.event.ListSelectionListener;
  */
 
 class ClientInfo extends Object {
+    
     private String nickname;
     private int joinTime;
     
